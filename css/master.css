@@ -1,0 +1,46 @@
+/* Postavlja font na ceo body. */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Postavljanje crne boje na navbar linkove. */
+.nav-link {
+    color: black !important;
+    font-size: 17px;
+}
+
+/* Iscrtava liniju ispod trenutne stranice. */
+.active {
+    border-bottom: 1px solid black;
+}
+
+/* Pomera logo. */
+.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+/* Postavlja padding celom containeru zbog izgleda. */
+.container {
+    padding: 30px;
+}
+
+/* Menja font u tabeli. */
+td, th {
+    font-size: 14px !important;
+}
+
+/* Menja cursor za tabelu i za add_patient_button. */
+tr, #add_patient_button {
+    cursor: pointer;
+}
+
+/* Stajling za badge-eve. */
+.badge {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#results {
+    cursor: default;
+}
