@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2019 at 04:59 PM
+-- Generation Time: May 22, 2019 at 06:21 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -31,12 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `appointments` (
   `a_id` int(11) NOT NULL,
   `a_date` date NOT NULL,
-  `a_time` int(11) NOT NULL,
+  `a_time` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `a_description` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
   `a_completed` tinyint(1) NOT NULL,
   `p_id` int(11) NOT NULL,
   `d_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`a_id`, `a_date`, `a_time`, `a_description`, `a_completed`, `p_id`, `d_id`) VALUES
+(1, '2019-05-18', '08:00', '1234', 0, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -48,10 +55,19 @@ CREATE TABLE `doctors` (
   `d_id` int(11) NOT NULL,
   `d_first_name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `d_last_name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `d_doctor_id` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `d_phone` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `d_email` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `d_mail` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
   `d_gender` varchar(1) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `doctors`
+--
+
+INSERT INTO `doctors` (`d_id`, `d_first_name`, `d_last_name`, `d_doctor_id`, `d_phone`, `d_mail`, `d_gender`) VALUES
+(1, 'Strahinja', 'Vucelic', '2154', '21321', '32131', 'M'),
+(2, 'Joca', 'Skljoca', '666', '235', '23523', 'F');
 
 -- --------------------------------------------------------
 
@@ -129,13 +145,13 @@ ALTER TABLE `patients`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `login`

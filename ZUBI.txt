@@ -1,4 +1,5 @@
-Amalgam - A
-Composite - C
-Extract - E
-Crown - X
+Default   -->  D
+Amalgam   -->  A
+Composite -->  C
+Extract   -->  E
+Crown     -->  X
