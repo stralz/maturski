@@ -41,7 +41,7 @@ tr, #add_patient_button, #add_doctor_button {
   cursor: pointer;
 }
 
-/*  */
+/* Postavlja cursor na default za ID results. */
 #results {
   cursor: default;
 }
@@ -49,4 +49,9 @@ tr, #add_patient_button, #add_doctor_button {
 /* Postavlja boju texta na sivu za <small> elemente. */
 small {
   color: gray;
+}
+
+/* Postavlja kurzor za dugmadi. */
+#patient_dialog_button, #doctor_dialog_button {
+  cursor: pointer;
 }

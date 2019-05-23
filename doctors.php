@@ -129,7 +129,7 @@ include 'php/dbh.php';
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-danger mr-auto" type="button" id="ed_delete_doctor"><i class="fas fa-trash"></i> Delete patient</button>
+          <button class="btn btn-danger mr-auto" type="button" id="ed_delete_doctor"><i class="fas fa-trash"></i> Delete doctor</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-success" id="save_doctor_button_modal">Save changes</button>
         </div>
@@ -231,10 +231,10 @@ include 'php/dbh.php';
         <th>#</th>
         <th>First Name</th>
         <th>Last Name</th>
+        <th>Gender</th>
         <th>Doctor ID</th>
         <th>Phone</th>
         <th>Mail</th>
-        <th>Gender</th>
       </thead>
       <tbody id="table_doctors_body">
         <?php
@@ -251,10 +251,10 @@ include 'php/dbh.php';
               echo "<th>$br</td>";
               echo "<td>{$row["d_first_name"]}</td>";
               echo "<td>{$row["d_last_name"]}</td>";
+              echo "<td>{$row["d_gender"]}</td>";
               echo "<td>{$row["d_doctor_id"]}</td>";
               echo "<td>{$row["d_phone"]}</td>";
               echo "<td>{$row["d_mail"]}</td>";
-              echo "<td>{$row["d_gender"]}</td>";
               echo "</tr>";
               $br++;
             }
@@ -281,10 +281,10 @@ include 'php/dbh.php';
                 echo "<th>$br</td>";
                 echo "<td>{$row["d_first_name"]}</td>";
                 echo "<td>{$row["d_last_name"]}</td>";
+                echo "<td>{$row["d_gender"]}</td>";
                 echo "<td>{$row["d_doctor_id"]}</td>";
                 echo "<td>{$row["d_phone"]}</td>";
                 echo "<td>{$row["d_mail"]}</td>";
-                echo "<td>{$row["d_gender"]}</td>";
                 echo "</tr>";
                 $br++;
               }
@@ -300,10 +300,10 @@ include 'php/dbh.php';
                 echo "<th>$br</td>";
                 echo "<td>{$row["d_first_name"]}</td>";
                 echo "<td>{$row["d_last_name"]}</td>";
+                echo "<td>{$row["d_gender"]}</td>";
                 echo "<td>{$row["d_doctor_id"]}</td>";
                 echo "<td>{$row["d_phone"]}</td>";
                 echo "<td>{$row["d_mail"]}</td>";
-                echo "<td>{$row["d_gender"]}</td>";
                 echo "</tr>";
                 $br++;
               }

@@ -22,8 +22,8 @@
         $row_ = $result_->fetch_assoc();
         $d_id = $row_["d_id"];
 
-        $q = "INSERT INTO appointments (a_id, a_date, a_time, a_description, a_completed, p_id, d_id)
-        VALUES (NULL, '$date', '$time', '$description', 0, '$p_id', '$d_id')";
+        $q = "INSERT INTO appointments (a_id, a_date, a_time, a_description, p_id, d_id)
+        VALUES (NULL, '$date', '$time', '$description', '$p_id', '$d_id')";
 
         $conn->query($q);
 
@@ -34,10 +34,5 @@
     } else {
       echo "It cannot be done!";
     }
-
-
-
-
-
   }
 ?>

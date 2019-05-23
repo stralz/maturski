@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2019 at 06:21 PM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: May 23, 2019 at 04:36 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,17 +33,9 @@ CREATE TABLE `appointments` (
   `a_date` date NOT NULL,
   `a_time` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `a_description` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `a_completed` tinyint(1) NOT NULL,
   `p_id` int(11) NOT NULL,
   `d_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `appointments`
---
-
-INSERT INTO `appointments` (`a_id`, `a_date`, `a_time`, `a_description`, `a_completed`, `p_id`, `d_id`) VALUES
-(1, '2019-05-18', '08:00', '1234', 0, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -145,7 +137,7 @@ ALTER TABLE `patients`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `doctors`
