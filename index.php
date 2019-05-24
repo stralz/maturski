@@ -61,11 +61,12 @@
             <th>Patient</th>
             <th>Date</th>
             <th>Time</th>
+			<th>Description</th>
           </thead>
           <tbody id="table_appointments_body">
             <?php
-              $today            = date("Y-m-d");
-              $q                = "SELECT a_id, a_date, a_time, d_id, d_first_name, d_last_name, p_id, p_first_name, p_last_name
+              $today = date("Y-m-d");
+              $q     = "SELECT a_id, a_date, a_time, a_description, d_id, d_first_name, d_last_name, p_id, p_first_name, p_last_name
               FROM doctors JOIN appointments USING (d_id) JOIN patients USING (p_id) WHERE a_date LIKE ('$today')";
 
               $result = $conn->query($q);
@@ -78,6 +79,7 @@
                   echo "<td id=\"{$row["p_id"]}\">{$row["p_first_name"]} {$row["p_last_name"]}</td>";
                   echo "<td>{$row["a_date"]}</td>";
                   echo "<td>{$row["a_time"]}</td>";
+				  echo "<td>{$row["a_description"]}</td>";
                   echo "</tr>";
                 }
               } else {
